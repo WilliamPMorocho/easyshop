@@ -1,9 +1,9 @@
 import React from "react";
 
-export const Comprar = () => {
+export const Carrito = () => {
     return (
         <>
-            <h1>Comprar</h1>
+            <h1>Carrito</h1>
         </>
     );
 }

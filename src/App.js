@@ -7,7 +7,6 @@ import GlobalRouter from "./routes/GlobalRouter";
 function App() {
   return (
     <div className="App">
-      <Header></Header>
       <GlobalRouter></GlobalRouter>
       <Footer></Footer>
     </div>

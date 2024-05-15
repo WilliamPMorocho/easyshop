@@ -1,9 +1,9 @@
 import React from "react";
 
-export const OfertasDia = () => {
+export const Contacto = () => {
     return (
         <>
-            <h1>Ofertas dia</h1>
+            <h1>Contacto</h1>
         </>
     );
 }
