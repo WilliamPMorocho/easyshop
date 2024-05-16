@@ -1,10 +1,10 @@
 import React from "react";
 import Product from "../components/Product";
+import {Link} from "react-router-dom";
 
 export const Inicio = () => {
     return (
         <>
-            <h1>HOME</h1>
             <Product></Product>
         </>
     );

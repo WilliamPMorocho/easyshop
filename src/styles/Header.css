@@ -30,6 +30,9 @@
 .header__search-form {
     margin-left: auto;
     display: flex;
+    align-items: center;
+    gap:45px;
+
 }
 
 .header__search-input {
@@ -50,4 +53,41 @@
 
 .header__search-button:hover {
     background-color: #777; /* Cambiar color al pasar el ratón */
+}
+
+.cart{
+    width: 42px;
+    height: 42px;
+}
+
+.nav-cart-count{
+    width: 22px;
+    height: 22px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -35px;
+    margin-left: -55px;
+    border-radius: 11px;
+    font-size: 14px;
+    background: red;
+    color: white;
+}
+
+.nav-search input {
+    padding: 5px;
+    border-radius: 3px;
+    border: none;
+}
+
+.search-results {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    background-color: #fff;
+    color: #333;
+    border-radius: 3px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    max-height: 200px;
+    overflow-y: auto;
 }

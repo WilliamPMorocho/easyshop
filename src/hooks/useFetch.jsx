@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 
 export const useFetch = (url) => {
 
-    console.log('ejecutando funcion useFetch');
+    console.log('ejecutando funcion useFetch   ->'+url);
     const [fetchResponse, setFetchResponse] = useState('...');
 
     useEffect(() => {

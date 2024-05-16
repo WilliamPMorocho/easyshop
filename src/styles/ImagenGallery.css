@@ -2,7 +2,13 @@
 .image-gallery {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    grid-gap: 10px;
+    grid-gap: 20px;
+}
+
+.image-gallery__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .image-gallery__image {
@@ -15,4 +21,27 @@
 
 .image-gallery__image:hover {
     transform: scale(1.05);
+}
+
+.image-gallery__details {
+    margin-top: 10px;
+    text-align: center;
+}
+
+.image-gallery__title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.image-gallery__description {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 5px;
+}
+
+.image-gallery__price {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #00aaff;
 }

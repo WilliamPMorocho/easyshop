@@ -1,18 +1,19 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import '../styles/Product.css';
-import {useFetch} from "../hooks/useFetch";
 import ImagenGallery from "./ImagenGallery";
+import {ShopContext} from "../context/ShopContext";
+import all_product from "../service/all_product";
 
 const Product = () => {
-    const {fetchResponse} = useFetch("https://fakestoreapi.com/products");
-
+    //const {fetchResponse} = useFetch("https://fakestoreapi.com/products");
+  const {fetchResponse} = useContext(ShopContext);
     return (
         <div className="product">
-            <h2>Nombre del Producto</h2>
+            <h2>OFERTAS DEL DIA</h2>
             {
-                fetchResponse!=='...'?(<ImagenGallery images={fetchResponse} />):('')
+                //fetchResponse!=='...'?(<ImagenGallery images={fetchResponse} />):('')
+                <ImagenGallery images={all_product}></ImagenGallery>
             }
-
         </div>
     );
 }

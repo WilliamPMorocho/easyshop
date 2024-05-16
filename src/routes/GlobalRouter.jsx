@@ -8,18 +8,20 @@ import {Landing} from '../views/Landing'
 import {Header} from "../components/Header";
 import {NotFound} from "../views/NotFound";
 import {Contacto} from "../views/Contacto";
+import ProductoDetalle from "../views/ProductoDetalle";
 
 
 function GlobalRouter() {
     return (
         <BrowserRouter>
-            <Header></Header>
+
             <Routes>
-                <Route path="/inicio" element={<Layout><Inicio/></Layout>} />
+                <Route path="/" element={<Layout><Inicio/></Layout>} />
                 <Route path="/hombre" element={<Layout><Hombre /></Layout>} />
                 <Route path="/mujer" element={<Layout><Mujer /></Layout>} />
                 <Route path="/contacto" element={<Layout><Contacto/></Layout>} />
                 <Route path="/carrito" element={<Layout><Carrito/></Layout>} />
+                <Route path="/productodetalle/:productId" element={<Layout><ProductoDetalle/></Layout>} />
                 <Route path="/landing" element={<Landing />}/>
                 <Route path="*" element={<Layout><NotFound></NotFound></Layout>} />
             </Routes>
@@ -29,6 +31,7 @@ function GlobalRouter() {
 
 const Layout = ({children}) => (
     <>
+        <Header></Header>
         {children}
     </>
 );
