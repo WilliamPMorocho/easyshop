@@ -1,16 +1,19 @@
-import React from 'react'
+import React, {useContext} from 'react'
 import {useParams} from 'react-router-dom';
 import Breadcrum from "../components/Breadcrums/Breadcrum";
 import ProductDisplay from "../components/ProductDisplay/ProductDisplay";
 import DescriptionBox from "../components/DescriptionBox/DescriptionBox";
-import all_product from "../service/all_product";
+import {ShopContext} from "../context/ShopContext";
 
 
 const ProductoDetalle = () => {
     const {productId} = useParams();
     //const {fetchResponse} = useFetch(`https://fakestoreapi.com/products/${productId}`);
     //const product = fetchResponse;
-    const product = all_product.find((e)=> e.id === Number(productId));
+
+    const {allProducts} = useContext(ShopContext);
+
+    const product = allProducts.find((e)=> e.id === Number(productId));
     return (
         <div>{
             product !== '...' ? (

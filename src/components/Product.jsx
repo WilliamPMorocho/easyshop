@@ -6,7 +6,6 @@ import Offers from "./Offers/Offers";
 import NewCollections from "./NewCollections/NewCollections";
 
 const Product = () => {
-    //const {fetchResponse} = useFetch("https://fakestoreapi.com/products");
     return (
         <div>
             <Hero/>

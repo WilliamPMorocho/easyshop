@@ -1,0 +1,90 @@
+/* Bloque */
+.payment-page {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f4f4f4;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Elementos */
+.payment-page__header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.payment-page__title {
+    font-size: 24px;
+    color: #333;
+}
+
+.payment-page__content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.payment-page__section {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.payment-page__section-title {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.payment-page__form-group {
+    margin-bottom: 15px;
+}
+
+.payment-page__label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.payment-page__input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+.payment-page__order-summary {
+    margin-top: 10px;
+}
+
+.payment-page__order-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+
+.payment-page__order-total {
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    margin-top: 10px;
+    border-top: 1px solid #ccc;
+    padding-top: 10px;
+}
+
+.payment-page__submit-button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    align-self: flex-end;
+}
+
+.payment-page__submit-button:hover {
+    background-color: #0056b3;
+}

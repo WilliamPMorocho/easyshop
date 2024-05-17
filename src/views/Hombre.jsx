@@ -4,10 +4,10 @@ import Item from "../components/Item/Item";
 import  "../styles/ShopCategory.css"
 
 export const Hombre = (props) => {
-    const {all_product} = useContext(ShopContext);
+    const {allProducts} = useContext(ShopContext);
     let filteredProducts;
 
-    filteredProducts = all_product.filter(item => item.category === props.category);
+    filteredProducts = allProducts.filter(item => item.category === props.category);
     while (filteredProducts.length < 76) {
         filteredProducts = [...filteredProducts, ...filteredProducts];
     }

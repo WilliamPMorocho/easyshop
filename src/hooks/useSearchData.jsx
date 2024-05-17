@@ -1,12 +1,14 @@
-import { useState, useEffect } from 'react';
-import all_product from "../service/all_product";
+import {useState, useEffect, useContext} from 'react';
+import {ShopContext} from "../context/ShopContext";
+
 
 const useSearchData = (searchTerm) => {
+const {allProducts} = useContext(ShopContext);
     const [filteredData, setFilteredData] = useState([]);
 
     useEffect(() => {
         if (searchTerm.length > 0) {
-            const filteredItems = all_product.filter((item) =>
+            const filteredItems = allProducts.filter((item) =>
                 item.name.toLowerCase().includes(searchTerm.toLowerCase())
             );
             setFilteredData(filteredItems);

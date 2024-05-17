@@ -3,12 +3,18 @@ import {Footer} from "./components/Footer";
 import GlobalRouter from "./routes/GlobalRouter";
 import {ShopContext} from "./context/ShopContext";
 import {useState} from "react";
-import all_product from "./service/all_product";
+import {useProducts} from "./hooks/useProducts";
+import {useNewCollection} from "./hooks/useNewCollection";
+import {usePopular} from "./hooks/usePopular";
+
 
 
 function App() {
     const [cartItems, setcartItems] = useState([]);
     //const {fetchResponse} = useFetch("https://fakestoreapi.com/products");
+    const allProducts = useProducts();
+    const newCollections = useNewCollection()
+    const popularItems = usePopular();
 
     const adicionarCarrito = (itemId, size, quantity) => {
         const existingCartItemIndex = cartItems.findIndex(item => item.id === itemId && item.size === size);
@@ -25,7 +31,7 @@ function App() {
             });
             setcartItems(updatedCartItems);
         } else {
-            const cartProduct = all_product.find((product) => product.id === itemId);
+            const cartProduct = allProducts.find((product) => product.id === itemId);
             cartProduct.size = size;
             cartProduct.quantity = quantity;
             setcartItems([...cartItems, cartProduct]);
@@ -36,21 +42,31 @@ function App() {
         setcartItems(cartItems.filter((product) => product.id !== itemId));
     };
 
+    const encerarCart = () =>{
+        setcartItems([]);
+    }
+
     const getTotalCartAmount = () => {
-        return cartItems.reduce((total, product) => total + (product.price * product.quantity), 0);
+        return cartItems.reduce((total, product) => total + (product.new_price * product.quantity), 0);
     };
+
     const getTotalCartItems = () => {
         return cartItems.length;
     };
+
+
     return (
         <div className="App">
             <ShopContext.Provider value={{
-                all_product,
+                allProducts,
+                newCollections,
+                popularItems,
                 cartItems,
                 adicionarCarrito,
                 removeFromCart,
                 getTotalCartAmount,
                 getTotalCartItems,
+                encerarCart,
             }}>
                 <GlobalRouter></GlobalRouter>
             </ShopContext.Provider>

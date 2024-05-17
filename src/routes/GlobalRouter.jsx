@@ -10,6 +10,7 @@ import {Contacto} from "../views/Contacto";
 import ProductoDetalle from "../views/ProductoDetalle";
 import men_banner from '../imagenes/banner_mens.png'
 import women_banner from '../imagenes/banner_women.png'
+import Payment from "../views/Payment";
 
 
 function GlobalRouter() {
@@ -22,6 +23,7 @@ function GlobalRouter() {
                 <Route path="/mujer" element={<Layout><Mujer banner={women_banner} category="women" /></Layout>} />
                 <Route path="/contacto" element={<Layout><Contacto/></Layout>} />
                 <Route path="/carrito" element={<Layout><Carrito/></Layout>} />
+                <Route path="/pagar" element={<Layout><Payment/></Layout>} />
                 <Route path="/productodetalle/:productId" element={<Layout><ProductoDetalle/></Layout>} />
                 <Route path="*" element={<Layout><NotFound></NotFound></Layout>} />
             </Routes>
