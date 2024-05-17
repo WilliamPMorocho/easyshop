@@ -1,10 +1,8 @@
-import React, {useContext} from 'react'
+import React from 'react'
 import {useParams} from 'react-router-dom';
 import Breadcrum from "../components/Breadcrums/Breadcrum";
-import {useFetch} from "../hooks/useFetch";
 import ProductDisplay from "../components/ProductDisplay/ProductDisplay";
 import DescriptionBox from "../components/DescriptionBox/DescriptionBox";
-import RelatedProducts from "../components/RelatedProducts/RelatedProducts";
 import all_product from "../service/all_product";
 
 

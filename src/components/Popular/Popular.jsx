@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React from 'react'
 import './Popular.css'
 import data_product from '../../service/data'
 import Item from '../Item/Item'

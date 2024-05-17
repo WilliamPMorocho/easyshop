@@ -1,6 +1,4 @@
-import logo from './logo.svg';
 import './App.css';
-import {Header} from "./components/Header";
 import {Footer} from "./components/Footer";
 import GlobalRouter from "./routes/GlobalRouter";
 import {ShopContext} from "./context/ShopContext";
@@ -9,7 +7,6 @@ import all_product from "./service/all_product";
 
 
 function App() {
-    const [globalCountItems, setGlobalCountItems] = useState(0);
     const [cartItems, setcartItems] = useState([]);
     //const {fetchResponse} = useFetch("https://fakestoreapi.com/products");
 

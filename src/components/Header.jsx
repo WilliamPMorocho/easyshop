@@ -1,7 +1,7 @@
-import React, {useContext, useState} from 'react';
+import React, {useContext} from 'react';
 import '../styles/Header.css';
 import icon from '../imagenes/cart_icon_dark.png'
-import {Link, Route} from "react-router-dom";
+import {Link} from "react-router-dom";
 import {ShopContext} from "../context/ShopContext";
 import SearchComponent from "./SearchComponent";
 

@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React from 'react'
 import './Offers.css'
 import exclusive_image from '../../imagenes/exclusive_image.png'
 

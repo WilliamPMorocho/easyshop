@@ -1,11 +1,10 @@
-import React, {useContext, useState} from "react";
+import React, {useContext} from "react";
 import {ShopContext} from "../context/ShopContext";
 import Item from "../components/Item/Item";
 import  "../styles/ShopCategory.css"
 
 export const Hombre = (props) => {
     const {all_product} = useContext(ShopContext);
-    const [sorting, setSorting] = useState('');
     let filteredProducts;
 
     filteredProducts = all_product.filter(item => item.category === props.category);
@@ -13,12 +12,6 @@ export const Hombre = (props) => {
         filteredProducts = [...filteredProducts, ...filteredProducts];
     }
 
-
-    if (sorting === '0') {
-        filteredProducts.sort((a, b) => a.new_price - b.new_price);
-    } else if (sorting === '1') {
-        filteredProducts.sort((a, b) => b.new_price - a.new_price);
-    }
         return (
         <div className='shop-category'>
             <img className='shopcategory-banner' src={props.banner} alt=''/>

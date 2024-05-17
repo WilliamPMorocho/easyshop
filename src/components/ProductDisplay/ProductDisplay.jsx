@@ -103,7 +103,7 @@ const ProductDisplay = (props) => {
           </div>
         </div>
         <div className="productdisplay-right-quantity">
-          <h1 className={`ph1_dark`}>Select Quantity</h1>
+          <h1 className={`ph1_dark`}>Cantidad</h1>
           <input
             type="number"
             min="1"

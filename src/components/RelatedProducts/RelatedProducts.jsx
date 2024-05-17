@@ -1,7 +1,6 @@
-import React, {useContext} from 'react'
+import React from 'react'
 import './RelatedProducts.css'
 import Item from '../Item/Item'
-import {useFetch} from "../../hooks/useFetch";
 import data_product from "../../service/data";
 
 
