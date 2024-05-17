@@ -35,6 +35,8 @@
 
 .carticon-product-icon {
     height: 62px;
+    width: 50px;
+    margin: auto;
 }
 
 .cartitems-remove-icon {
@@ -112,4 +114,25 @@ button{
     background: black;
     color: white;
     cursor: pointer;
+}
+
+.empty-cart{
+
+}
+.empty-cart img{
+    width: 150px;
+    margin-left: 490px;
+}
+
+.empty-cart div{
+    text-align: center;
+}
+
+.empty-cart_color {
+    font-size: 24px;
+    color: #333333;
+}
+.empty-cart_colorLarge {
+    font-size: 24px;
+    color: #333333;
 }

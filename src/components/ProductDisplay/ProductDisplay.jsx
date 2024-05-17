@@ -9,8 +9,8 @@ const ProductDisplay = (props) => {
   const { product } = props;
   const { adicionarCarrito } = useContext(ShopContext);
 
-  const [selectedSize, setSelectedSize] = useState("S"); // State for selected size
-  const [selectedQuantity, setSelectedQuantity] = useState(1); // State for selected quantity
+  const [selectedSize, setSelectedSize] = useState("S");
+  const [selectedQuantity, setSelectedQuantity] = useState(1);
 
   const handleSizeChange = (size) => {
     setSelectedSize(size);
@@ -58,7 +58,7 @@ const ProductDisplay = (props) => {
           quidem dicta!
         </div>
         <div className="productdisplay-right-size">
-          <h1 className={`ph1_dark`}>Select Size</h1>
+          <h1 className={`ph1_dark`}>Selecciona el tamaño</h1>
           <div className="productdisplay-right-sizes">
             <div
               className={`size-option ${
@@ -116,13 +116,13 @@ const ProductDisplay = (props) => {
             adicionarCarrito(product.id, selectedSize, selectedQuantity);
           }}
         >
-          ADD TO CART
+          Añadir
         </button>
         <p className={"productdisplay-right-category pdiv_dark"}>
-          <span>Category : </span>Women, T-shirt, Crop Top
+          <span>Categoria : </span>Mujer, Camiseta, Tops
         </p>
         <p className={"productdisplay-right-category pdiv_dark"}>
-          <span>Tags : </span>Modern, Latest
+          <span>Tags : </span>Moderno, Ultimo
         </p>
       </div>
     </div>

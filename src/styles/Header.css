@@ -74,7 +74,11 @@
     color: white;
 }
 
-.nav-search input {
+.search-container {
+    position: relative;
+}
+
+.search-container input {
     padding: 5px;
     border-radius: 3px;
     border: none;
@@ -90,4 +94,10 @@
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     max-height: 200px;
     overflow-y: auto;
+    position: absolute;
+    top: calc(100% + 5px);
+    left: 0;
+    width: 100%;
+    z-index: 1;
 }
+

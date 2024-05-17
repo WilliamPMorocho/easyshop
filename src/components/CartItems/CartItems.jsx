@@ -7,12 +7,11 @@ import {ShopContext} from "../../context/ShopContext";
 const CartItems = () => {
     const { cartItems, removeFromCart, getTotalCartAmount } = useContext(ShopContext);
 
-    // Function to calculate the total price for each item considering the quantity
+
     const calculateTotalPrice = (item) => {
         return item.new_price * item.quantity;
     };
 
-    // Check if cart is empty
     const isEmptyCart = cartItems.length === 0;
 
     return (
@@ -31,13 +30,12 @@ const CartItems = () => {
                     <img
                         src={placeholder_image}
                         alt="Empty Cart"
-                        style={{ width: "150px", marginLeft: "490px" }}
                     />
-                    <div style={{ textAlign: "center" }}>
-                        <p style={{ fontSize: "24px", color: "#333" }}>
+                    <div>
+                        <p className={'empty-cart_color'}>
                             Hey, it feels so light!
                         </p>
-                        <p style={{ fontSize: "18px", color: "#999" }}>
+                        <p className={'empty-cart_colorLarge'}>
                             There is nothing in your bag. Let's add some items.
                         </p>
                     </div>
@@ -54,7 +52,6 @@ const CartItems = () => {
                                 src={item.image}
                                 alt=""
                                 className="carticon-product-icon"
-                                style={{ width: "50px", margin: "auto" }}
                             />
                             <p>{item.name}</p>
                             <p className="text-Align">${item.new_price}</p>

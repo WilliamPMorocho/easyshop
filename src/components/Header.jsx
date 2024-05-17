@@ -1,4 +1,4 @@
-import React, {useContext} from 'react';
+import React, {useContext, useState} from 'react';
 import '../styles/Header.css';
 import icon from '../imagenes/cart_icon_dark.png'
 import {Link, Route} from "react-router-dom";
@@ -7,6 +7,7 @@ import SearchComponent from "./SearchComponent";
 
 export const Header = () => {
     const {getTotalCartItems} = useContext(ShopContext);
+
     return (
         <nav className="header">
             <ul className="header__list">
@@ -26,9 +27,7 @@ export const Header = () => {
             <form className="header__search-form">
                 <Link to='/carrito'><img src={icon} alt="" className='cart'/></Link>
                 <div className="nav-cart-count">{getTotalCartItems()}</div>
-                <input type="text" placeholder="Buscar productos..." className="header__search-input"/>
                 <SearchComponent></SearchComponent>
-                <button type="submit" className="header__search-button">Buscar</button>
             </form>
         </nav>
     );

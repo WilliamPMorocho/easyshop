@@ -48,3 +48,10 @@
 .footer__social-link:hover {
     text-decoration: underline;
 }
+
+.footer__img{
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+}
